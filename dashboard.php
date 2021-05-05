@@ -20,15 +20,23 @@
 			<img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
 			</a>
 			<ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-			<li><a class="dropdown-item" href="#">Courses</a></li>
 			<li><a class="dropdown-item" href="#">Profile</a></li>
 			<li><hr class="dropdown-divider"></li>
-			<li><a class="dropdown-item" href="#">Sign out</a></li>
+			<li><a class="dropdown-item" href="/logout.php">Sign out</a></li>
 			</ul>
 		</div>
 		</div>
 	</div>
 </div>
 </header>
+
+<body>
+<div class="container">
+	<h3 class="my-5">Hi, <b><?php echo htmlspecialchars($_SESSION["email"]); ?></b>. Welcome to our site.</h3>
+	<p>
+        <a href="create_course.php" class="btn btn-primary">Create Course</a>
+        <a href="logout.php" class="btn btn-danger ml-3">Sign Out</a>
+    </p>
+</div>
 
 <?php include_once('inc/footer.php'); ?>
